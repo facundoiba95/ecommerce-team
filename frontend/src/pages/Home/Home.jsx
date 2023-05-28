@@ -1,19 +1,19 @@
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { getAllProducts } from '../../api/axios'
+import { getAllProducts, getCategories } from '../../api/axios'
+import { Banner } from '../../components'
 
 const Home = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(getAllProducts())
+    dispatch(getCategories())
   }, [dispatch])
 
   return (
     <>
-      <div>
-        <h1>CATEGORIAS</h1>
-      </div>
+      <Banner />
     </>
   )
 }

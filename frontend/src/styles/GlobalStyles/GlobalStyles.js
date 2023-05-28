@@ -17,6 +17,7 @@ const GlobalStyles = createGlobalStyle`
     --regular: 300;
     --semibold: 600;
     --bold: 800;
+    --radius: 8px;
 }
 
 //colores por ahora
@@ -30,6 +31,13 @@ body{
 a{
     text-decoration: none;
     color: inherit;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    height: 100%;
 }
 `
 

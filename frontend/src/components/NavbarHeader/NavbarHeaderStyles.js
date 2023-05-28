@@ -59,12 +59,12 @@ export const NavbarListStyles = styled.ul`
 export const NavbarItemStyle = styled(NavLink)`
   font-weight: var(--regular);
   cursor: pointer;
-  transition: ease 0.2s;
+  transition: ease 0.3s;
   position: relative;
+  transition: all ease 0.3s;
+
   &.active {
-    transition: ease 0.2s;
     color: var(--color-ui);
-    font-weight: var(--semibold);
   }
 
   @media (min-width: 768px) {
@@ -73,26 +73,25 @@ export const NavbarItemStyle = styled(NavLink)`
       position: absolute;
       bottom: -5px;
       left: 0;
-      width: 0;
+      width: 0%;
       height: 2px;
-      transition: ease 0.2s;
+      transition: all ease 0.3s;
     }
 
     &:hover {
-      transition: ease 0.2s;
       color: var(--color-ui);
+      transition: all ease 0.3s;
     }
 
     &:hover::after {
-      transition: ease 0.2s;
       background: var(--color-ui);
       width: 100%;
+      transition: all ease 0.3s;
     }
 
     &.active {
       &::after {
         background: var(--color-ui);
-        transition: ease 0.2s;
         width: 100%;
       }
     }
@@ -110,6 +109,11 @@ export const IconsHeaderContainerStyles = styled.span`
   .iconHeader {
     font-size: var(--icon-size);
     cursor: pointer;
+    transition: ease 300ms;
+    &:hover {
+      transition: ease 300ms;
+      color: var(--color-ui);
+    }
   }
 
   @media (min-width: 768px) {
